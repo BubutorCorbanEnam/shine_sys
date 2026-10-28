@@ -9,21 +9,86 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
-:root{
-  --navy:#0F1F3D;--navy-80:#1A3060;--navy-60:#2A4A80;
-  --gold:#C9A84C;--gold-light:#F0D58C;--gold-pale:#FDF6E3;
-  --cream:#FAFAF7;--white:#FFFFFF;
-  --gray-50:#F5F5F2;--gray-100:#E8E8E3;--gray-200:#D0D0C8;
-  --gray-400:#9A9A90;--gray-600:#5A5A52;--gray-800:#2A2A24;
-  --green:#1A6B3C;--green-light:#E8F5EE;
-  --red:#B02020;--red-light:#FDECEC;
-  --amber:#8B5E00;--amber-light:#FFF3D6;
-  --teal:#0F6B6B;--teal-light:#E5F5F5;
-  --purple:#5A0F6B;--purple-light:#F0E5F5;
-  --sidebar-w:240px;--header-h:62px;
-  --radius:10px;--radius-lg:16px;
-  --shadow:0 2px 12px rgba(15,31,61,0.08);
-  --shadow-md:0 4px 24px rgba(15,31,61,0.12);
+:root:root {
+  /* Brand & Primary Colors */
+  --navy: #0F1F3D;
+  --navy-80: #1A3060;
+  --navy-60: #2A4A80;
+  --navy-hsl: 219, 61%, 15%;
+
+  --gold: #C9A84C;
+  --gold-light: #F0D58C;
+  --gold-pale: #FDF6E3;
+  --gold-hsl: 43, 56%, 55%;
+
+  /* Neutrals & Surfaces */
+  --cream: #FAFAF7;
+  --white: #FFFFFF;
+  --gray-50: #F5F5F2;
+  --gray-100: #E8E8E3;
+  --gray-200: #D0D0C8;
+  --gray-400: #9A9A90;
+  --gray-600: #5A5A52;
+  --gray-800: #2A2A24;
+
+  /* Status & Accents */
+  --green: #1A6B3C;
+  --green-light: #E8F5EE;
+  --red: #B02020;
+  --red-light: #FDECEC;
+  --amber: #8B5E00;
+  --amber-light: #FFF3D6;
+  --teal: #0F6B6B;
+  --teal-light: #E5F5F5;
+  --purple: #5A0F6B;
+  --purple-light: #F0E5F5;
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+
+  /* Spacing Scale */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Layout & Structural Sizing */
+  --sidebar-w: 240px;
+  --header-h: 62px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --shadow: 0 2px 12px rgba(15, 31, 61, 0.08);
+  --shadow-md: 0 4px 24px rgba(15, 31, 61, 0.12);
+}
+
+/* Dark Mode Theme Inversion */
+[data-theme="dark"], 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cream: #121620;
+    --white: #1A2234;
+    --gray-50: #222C42;
+    --gray-100: #2A3652;
+    --gray-200: #3B4D73;
+    --gray-400: #8C9BBF;
+    --gray-600: #C2CCD9;
+    --gray-800: #F0F4F8;
+    
+    --shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.4);
+  }
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--gray-800);font-size:14px;min-height:100vh;}
